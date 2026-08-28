@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Market</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    🎓 Campus Market
+  </div>
+
+  <button id="sellBtn" class="primary">
+    + Sell / Rent
+  </button>
+</header>
+
+<section class="hero">
+  <h1>Buy, Sell & Rent Around Your Campus</h1>
+  <p>Everything students need, right inside their hostel or campus community.</p>
+
+  <div class="search">
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="Search books, cycle, electronics..."
+    >
+
+    <button id="searchBtn">Search</button>
+  </div>
+</section>
+
+<section class="categories">
+  <button data-category="">All</button>
+  <button data-category="Books">📚 Books</button>
+  <button data-category="Electronics">💻 Electronics</button>
+  <button data-category="Furniture">🪑 Furniture</button>
+  <button data-category="Cycles">🚲 Cycles</button>
+  <button data-category="Clothes">👕 Clothes</button>
+  <button data-category="Other">📦 Other</button>
+</section>
+
+<main>
+  <div class="section-title">
+    <h2>Latest Listings</h2>
+  </div>
+
+  <div id="listings" class="grid"></div>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+
+    <button id="closeModal" class="close">×</button>
+
+    <h2>Post a Listing</h2>
+
+    <form id="listingForm">
+
+      <input
+        name="title"
+        placeholder="Item title"
+        required
+      >
+
+      <textarea
+        name="description"
+        placeholder="Description"
+      ></textarea>
+
+      <input
+        name="price"
+        type="number"
+        placeholder="Price"
+        required
+      >
+
+      <select name="type">
+        <option value="sell">Sell</option>
+        <option value="rent">Rent</option>
+        <option value="free">Free</option>
+      </select>
+
+      <select name="category">
+        <option>Books</option>
+        <option>Electronics</option>
+        <option>Furniture</option>
+        <option>Cycles</option>
+        <option>Clothes</option>
+        <option>Other</option>
+      </select>
+
+      <input
+        name="campus"
+        placeholder="Campus / Hostel"
+        required
+      >
+
+      <input
+        name="seller_name"
+        placeholder="Your name"
+        required
+      >
+
+      <button class="primary" type="submit">
+        Publish Listing
+      </button>
+
+    </form>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+
+</body>
+</html>
